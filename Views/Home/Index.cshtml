@@ -1,0 +1,32 @@
+﻿@model List<EmployeeApplication.Models.Employee>
+
+@{
+}
+
+<h1>List of Employees</h1>
+
+<table class="table">  
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model){
+            <tr>
+                <td>@employee.id</td>
+                <td>@employee.firstName</td>
+                <td>@employee.lastName</td>
+                <td>@employee.email</td>
+                <td><a href="Employee/View/@employee.id">edit</a></td>
+            </tr>
+            
+
+        }
+    </tbody>
+
+</table>
